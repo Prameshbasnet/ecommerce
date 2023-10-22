@@ -5,7 +5,8 @@ import React from "react";
 import "./Sidebar.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const Sidebar = () => {
+const Sidebar = ({ handleChange }) => {
+	
 	return (
 		<div>
 			<section className="sidebar">
@@ -14,9 +15,9 @@ const Sidebar = () => {
 						<AiOutlineShoppingCart />
 					</h1>
 				</div>
-                <Category />
-                <Price/>
-                <Colors/>
+                <Category handleChange={handleChange} />
+                <Price handleChange={handleChange}/>
+                <Colors handleChange={handleChange}/>
 			</section>
 		</div>
 	);
